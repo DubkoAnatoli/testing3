@@ -15,5 +15,16 @@ public class Message {
     public Message(String s)
     {
         text = s;
+    }
+    
+    public Message asList()
+    {
+        text = "\t- " + text;
+        return this;
+    }
+    
+    public String getText()
+    {
+        return text;
     }   
 }

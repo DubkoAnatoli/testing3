@@ -41,4 +41,15 @@ public class TDD3Test {
         int result = n.getSize();
         assertEquals(true, result > 0);
     } 
+    
+    @Test
+    public void creatingOfNewMessageAsListIntoNote() {
+        Organizer o = new Organizer();
+        Note n = new Note("title");
+        Message m = new Message("message").asList();
+        n.addMessage(m);
+        o.addNote(n);
+        int result = m.getText().indexOf("\t-");
+        assertEquals(true, result > -1);
+    }
 }
