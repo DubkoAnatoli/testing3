@@ -61,7 +61,6 @@ public class TDD3Test {
         int result = o.getSize();
         assertEquals(true, result == 5);
     }
-    
     @Test
     public void getStringsOfNote() {
         Note n = new Note("title");
