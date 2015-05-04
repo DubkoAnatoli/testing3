@@ -30,4 +30,15 @@ public class TDD3Test {
         int result = o.getSize();
         assertEquals(true, result > 0);
     } 
+    
+    @Test
+    public void creatingOfNewMessageIntoNote() {
+        Organizer o = new Organizer();
+        Note n = new Note("title");
+        Message m = new Message("message");
+        n.addMessage(m);
+        o.addNote(n);
+        int result = n.getSize();
+        assertEquals(true, result > 0);
+    } 
 }
