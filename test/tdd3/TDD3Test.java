@@ -52,4 +52,25 @@ public class TDD3Test {
         int result = m.getText().indexOf("\t-");
         assertEquals(true, result > -1);
     }
+    
+    @Test
+    public void max5NotesInOrganizerCycledRemove() {
+        Organizer o = new Organizer();
+        Note n = new Note("title");
+        o.addNote(n).addNote(n).addNote(n).addNote(n).addNote(n).addNote(n);
+        int result = o.getSize();
+        assertEquals(true, result == 5);
+    }
+    
+    @Test
+    public void getStringsOfNote() {
+        Note n = new Note("title");
+        n.addMessage(new Message("1")).addMessage(new Message("2")).addMessage(new Message("3"));
+        String result = n.getStrings();
+        String expResult = 
+                "1\n"
+                + "2\n"
+                + "3\n";
+        assertEquals(expResult, result);
+    }
 }

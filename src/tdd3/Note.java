@@ -31,4 +31,13 @@ public class Note {
     {
         return messages.size();
     }
+    
+    public String getStrings()
+    {
+        String t = "";
+        for (Message message : messages) {
+            t += message.getText()+'\n';
+        }
+        return t;
+    }
 }
