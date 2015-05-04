@@ -40,4 +40,9 @@ public class Note {
         }
         return t;
     }
+    
+    String getTitle()
+    {
+        return title;
+    }
 }

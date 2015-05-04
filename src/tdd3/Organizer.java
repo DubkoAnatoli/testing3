@@ -27,4 +27,13 @@ public class Organizer {
     {
         return database.size();
     }
+    
+    String getTitles()
+    {
+        String t = "";
+        for (Note note : database) {
+            t += database.indexOf(note) + " - " + note.getTitle()+'\n';
+        }
+        return t;
+    }
 }

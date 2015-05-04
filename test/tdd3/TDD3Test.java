@@ -61,6 +61,7 @@ public class TDD3Test {
         int result = o.getSize();
         assertEquals(true, result == 5);
     }
+    
     @Test
     public void getStringsOfNote() {
         Note n = new Note("title");
@@ -70,6 +71,17 @@ public class TDD3Test {
                 "1\n"
                 + "2\n"
                 + "3\n";
+        assertEquals(expResult, result);
+    }
+    
+    @Test
+    public void getStringsOfNoteTitles() {
+        Organizer o = new Organizer();
+        o.addNote(new Note("title_1")).addNote(new Note("title_2"));
+        String result = o.getTitles();
+        String expResult = 
+                "0 - title_1\n"
+                + "1 - title_2\n";
         assertEquals(expResult, result);
     }
 }
