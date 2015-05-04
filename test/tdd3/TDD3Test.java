@@ -52,4 +52,13 @@ public class TDD3Test {
         int result = m.getText().indexOf("\t-");
         assertEquals(true, result > -1);
     }
+    
+    @Test
+    public void max5NotesInOrganizerCycledRemove() {
+        Organizer o = new Organizer();
+        Note n = new Note("title");
+        o.addNote(n).addNote(n).addNote(n).addNote(n).addNote(n).addNote(n);
+        int result = o.getSize();
+        assertEquals(true, result == 5);
+    }
 }
