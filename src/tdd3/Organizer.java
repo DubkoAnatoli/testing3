@@ -43,5 +43,12 @@ public class Organizer {
             return database.get(i);
         else
             return null;
+    }   
+    
+    boolean sendNoteByEmail(Note n, Email e)
+    {
+        if(n!=null&&e!=null)
+            return true;
+        return false;
     }
 }

@@ -101,4 +101,13 @@ public class TDD3Test {
         Note result = o.getNoteByIndex(4);
         assertEquals(null, result);
     }
+    
+    @Test
+    public void sendNoteByEmail() {
+        Organizer o = new Organizer();
+        Email e = new Email("test@gmail.com").usePOP3();
+        o.addNote(new Note("title_0")).addNote(new Note("title_1"));
+        boolean result = o.sendNoteByEmail(o.getNoteByIndex(1),e);
+        assertEquals(true, result);
+    }
 }
