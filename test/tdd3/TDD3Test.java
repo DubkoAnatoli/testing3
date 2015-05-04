@@ -84,4 +84,21 @@ public class TDD3Test {
                 + "1 - title_2\n";
         assertEquals(expResult, result);
     }
+    
+    @Test
+    public void getNoteByIndex() {
+        Organizer o = new Organizer();
+        o.addNote(new Note("title_0")).addNote(new Note("title_1"));
+        String result = o.getNoteByIndex(1).getTitle();
+        String expResult = "title_1";
+        assertEquals(expResult, result);
+    }
+    
+    @Test
+    public void getNoteByIndexOutOfRange() {
+        Organizer o = new Organizer();
+        o.addNote(new Note("title_0")).addNote(new Note("title_1"));
+        Note result = o.getNoteByIndex(4);
+        assertEquals(null, result);
+    }
 }

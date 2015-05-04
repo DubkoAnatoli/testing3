@@ -36,4 +36,12 @@ public class Organizer {
         }
         return t;
     }
+    
+    Note getNoteByIndex(int i)
+    {
+        if(database.size() > i)
+            return database.get(i);
+        else
+            return null;
+    }
 }
